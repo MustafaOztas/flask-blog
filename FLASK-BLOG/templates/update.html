@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <br>
+    <h3>Makale Düzenle</h3>
+    <hr>
+    {% from "includes/formhelpers.html" import render_field %}
+    <form method="POST">
+    {{ render_field(form.title,class = "form-control") }}
+    {{ render_field(form.content,class = "form-control") }}
+    <br>
+   <center><button type="submit" class="btn btn-primary">Güncelle!!</button></center>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <center><strong>Designed By Mustafa Öztaş</strong></center>
+{% endblock body %}

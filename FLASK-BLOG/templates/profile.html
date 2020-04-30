@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if user %}
+<br>
+<div class="container">
+    <div class="row">
+<br>
+<br>
+    	<div class="span3 well">
+        <center>
+        <a href="#aboutModal" data-toggle="modal"><img src="https://pbs.twimg.com/profile_images/1047608250642915333/clr5PgRw_400x400.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+         <h3>{{user.name}}</h3>
+         <em>Daha Fazla Bilgi İçin Resme Tıkla</em>
+         <p>TWİTTER<br><a target="_blank" href="https://twitter.com/oztas_py">Mustafa Öztaş</a></p>
+		</center>
+            <div class="modal hide" id="aboutModal">
+			    <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">✕</button>
+			        <h3>{{user.name}} Hakkında</h3>
+			    </div>
+			        <div class="modal-body" style="text-align:center;">
+			        <div class="row-fluid">
+			            <div class="span10 offset1">
+			                <div id="modalTab">
+			                    <div class="tab-content">
+			                        <div class="tab-pane active" id="about">
+    <img src="https://pbs.twimg.com/profile_images/1047608250642915333/clr5PgRw_400x400.jpg" name="aboutme" width="400" height="300" border="0" class="img-circle"></a>
+      <h3 class="media-heading">{{user.name}} <small> TR</small></h3>
+      <small>Username: </small><h3 class="media-heading">{{user.username}} </h3>
+      <small>E-Posta: </small><h3 class="media-heading">{{user.email}} </h3>
+                
+    </center>
+    <hr>
+        <center>
+    <p class="text-center"><strong>Bio: </strong><br>
+     Yaşanacak Günler Var Ama Aceleside Yok ;)</p>
+      <br>
+        </center>
+      </div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+{% else %}
+    <div class =" alert alert-danger">Kullanıcı Bulunamıyor</div>
+{% endif %}
+
+{% endblock body %}

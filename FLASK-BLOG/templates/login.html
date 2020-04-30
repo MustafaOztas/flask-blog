@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+    <br>
+    <h3>Giriş Yap</h3>
+    <hr>
+    {% from "includes/formhelpers.html" import render_field %}
+
+    <form method="POST">
+    {{ render_field(form.username,class = "form-control") }}
+    {{ render_field(form.password,class = "form-control") }}
+    <br>
+    <center><button type="submit" class="btn btn-primary">Giriş Yap!</button></center>
+    <br>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <center><strong>Designed By Mustafa Öztaş</strong></center>
+
+
+{% endblock body %}
